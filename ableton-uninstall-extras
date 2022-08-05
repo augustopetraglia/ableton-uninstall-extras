@@ -1,0 +1,10 @@
+#!/bin/bash
+
+username=$(id -un)
+rm -rf /Users/$username/Library/Preferences/Ableton/
+rm -rf /Users/$username/Library/Application\ Support/Ableton/
+rm -rf /Users/$username/Library/Caches/Ableton/
+find /Users/$username/Library/Preferences/ -name 'com.ableton.live.*'  -exec rm {} \;
+find /Library/Application\ Support/Propellerhead\ Software/ReWire/ -name 'Ableton Live Engine*'  -exec rm {} \;
+find /Users/$username/Library/Application\ Support/Propellerhead\ Software/ReWire/ -name 'Ableton Live Engine*'  -exec rm {} \;
+
